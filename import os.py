@@ -19,9 +19,7 @@ def list_files():
         directory = filedialog.askdirectory(title="Select a Folder")
         if not directory:
             return
-#  directory = filedialog.askdirectory(title="Select a Folder")
-        # if not directory:
-            # return
+
         if not os.path.exists(directory):
             messagebox.showerror("Error", f"Directory not found: {directory}")
             return
@@ -50,7 +48,7 @@ def show_storage_chart():
     plt.title(f"Storage Usage of {drive} Drive")
     plt.show()
     log_action(f"Displayed storage chart for {drive} drive")
-# drive = simpledialog.askstring("Input", "Enter Drive Letter (e.g., C):")
+
 def check_disk():
     drive = simpledialog.askstring("Input", "Enter Drive Letter (e.g., C):")
     if drive:
@@ -119,7 +117,7 @@ buttons = [
     ("💥 Simulate Disk Crash", simulate_disk_crash, "#c0392b"),
     ("♻ Recover Files", recover_files, "#27ae60")
 ]
-# for i, (text, cmd, color) in enumerate(buttons):
+
 for i, (text, cmd, color) in enumerate(buttons):
     row, col = divmod(i, 2)
     btn = tk.Button(button_frame, text=text, command=cmd, font=("Arial", 11, "bold"),
