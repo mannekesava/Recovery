@@ -104,8 +104,7 @@ button_frame = tk.Frame(root)
 button_frame.pack(pady=10)
 
 def on_enter(e):
-    
-    e.widget["background"] = "#999AAB"
+    ....    e.widget["background"] = "#999AAB"
 
 def on_leave(e):
     e.widget["background"] = e.widget.default_color
@@ -118,7 +117,7 @@ buttons = [
     ("💥 Simulate Disk Crash", simulate_disk_crash, "#c0392b"),
     ("♻ Recover Files", recover_files, "#27ae60")
 ]
-
+# for i, (text, cmd, color) in enumerate(buttons):
 for i, (text, cmd, color) in enumerate(buttons):
     row, col = divmod(i, 2)
     btn = tk.Button(button_frame, text=text, command=cmd, font=("Arial", 11, "bold"),
