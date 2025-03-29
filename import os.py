@@ -104,6 +104,7 @@ button_frame = tk.Frame(root)
 button_frame.pack(pady=10)
 
 def on_enter(e):
+    
     e.widget["background"] = "#999AAB"
 
 def on_leave(e):
